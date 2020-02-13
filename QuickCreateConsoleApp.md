@@ -22,7 +22,7 @@ namespace myApp
 }
 ```
 
-##Run your app
+## Run it:
 ```bash
 dotnet run
 ```
