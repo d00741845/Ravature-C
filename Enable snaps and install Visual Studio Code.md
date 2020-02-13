@@ -18,12 +18,17 @@ Reboot to complete the installation.
 
 
 
-## Install Visual Studio Code
+## Install Visual Studio Code (SNAP)
 Install Visual Studio Code:
 ```bash
 sudo snap install code --classic
 ```
-
+## Remove Snap packages
+Remove a Snap package:
+```bash
+sudo snap remove <package>
+sudo snap remove code
+```
 
 # Register Microsoft key and Needed before installing .NET:
   1. Register the Microsoft key.
