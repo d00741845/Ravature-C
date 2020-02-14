@@ -1,4 +1,4 @@
-# Ravature-C
+# Ravature-CSharp
 Enable snaps and install Visual Studio Code.md
 
 ## refs link:
