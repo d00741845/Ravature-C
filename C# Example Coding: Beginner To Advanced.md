@@ -1098,17 +1098,59 @@ class Car
       carValue = 2000;
     return carValue;
   }
-}
-
-}
-}
+}}}
 ```
 
 ---
 
+[Resume]https://youtu.be/FPeGkedZykA?t=16275
 # More About Classes and Methods (4:32)
+## Simple Understanding of Class via Bucket with Handels
 ```c#
+static void Main(string[] args){
+  // 3. Create New Instance of Car Class called myCar
+  // This will Create a bucket for addresse
+  Car myCar      = new Car();
+  
+  // 4. Create a handle into the bucket
+  myCar.Make      = "Oldmosbill";
+  myCar.Model     = "cutlass supreme"  ;
+  myCar.Color     = "blue";
+  myCar.Year      = 1919;
+  
+  // 5. Create New Bucket handle and attach to myCar bucket
+  //Car myOtherCar;     // Created the bucket handle
+  //myOtherCar = myCar; // Attach  the new handle to myCar bucket - (Just Copied the handle of myCar)
+  Car myOtherCar = myCar; // same as above 2 lines
+  
+  // 6. Prove  step 5 is just attached to same bucket of information.
+  Console.Clear();
+  Console.WriteLine("MyOtherCar:\n{0}\n{1}\n{2}\n{3}",myOtherCar.Make, 
+    myOtherCar.Model, myOtherCar.Year, myOtherCar.Color);
 
+  myOtherCar.Year=2020;
+
+  Console.WriteLine("\nMyCar:\n{0}\n{1}\n{2}\n{3}",myCar.Make, 
+    myCar.Model, myCar.Year, myCar.Color);
+ 
+  // 7. Manuel Remove Handles
+  myCar=null;
+  myOtherCar=null; 
+}
+
+// 1. Define a Class
+class Car{
+  // 2. Define Properties(define data types)
+  public string Make { get; set; }
+  public string Model { get; set; }
+  public int Year { get; set; }
+  public string Color { get; set; }
+
+}}}
+
+```
+
+```c#
 ```
 ```c#
 
@@ -1131,7 +1173,3 @@ class Car
 ```c#
 
 ```
-```c#
-
-```
-
