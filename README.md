@@ -4,8 +4,8 @@
 Enable snaps and install Visual Studio Code.md
 
 ## Refs:
-[dotnet.microsoft](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/next "dotnet.microsoft")
-[docs.microsoft](https://docs.microsoft.com/ "docs.microsoft")
+>[dotnet.microsoft](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/next "dotnet.microsoft")
+>[docs.microsoft](https://docs.microsoft.com/ "docs.microsoft")
 
 
 
