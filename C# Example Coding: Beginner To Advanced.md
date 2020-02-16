@@ -1,4 +1,5 @@
 # C# Example Coding: Beginner To Advanced
+![C# Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/C_Sharp_logo.svg/150px-C_Sharp_logo.svg.png)
 
 
 ### Variable:
@@ -12,7 +13,11 @@
  -  written in lower camel case
  -  different types require different amounts of memory
 
-Parimitive date type is any data type that is not a reference to an object.
+primitive date type is any data type that is not a reference to an object.
+In C#:
+primitive data types are: int, object, short, char, float, double, char, bool. 
+They are called primitive because they are the main built-in types, and could be used to build other data types.
+In C#, primitive data types are actually objects. 
 
 
 ### Variable Types:
@@ -21,17 +26,17 @@ Parimitive date type is any data type that is not a reference to an object.
     3 char
 
 
- 
+## C# Primitive Datatypes 
 ### Integral Variables:
 |ALIAS	|TYPE	    |TYPE       |NAME	        |SIZE(BITS)	|RANGE	           |DEFAULT VALUE|
 |-------|-----------|-----------|---------------|-----------|------------------|-------------|
-|short	|signed     |integer	|System.Int16	|16	        |-32768 to 32767   |0|
-|sbyte	|signed     |integer	|System.Sbyte	|8	        |-128 to 127	   |0|
-|Int	|signed     |integer	|System.Int32	|32	        |-231 to 231-1	   |0|
-|long	|signed     |integer	|System.Int64	|64	        |-263 to 263-1	   |0L|
 |byte	|unsigned   |integer	|System.byte	|8	        |0 to 255	       |0|
+|sbyte	|signed     |integer	|System.Sbyte	|8	        |-128 to 127	   |0|
+|short	|signed     |integer	|System.Int16	|16	        |-32768 to 32767   |0|
 |ushort	|unsigned   |integer	|System.UInt16	|16	        |0 to 65535	       |0|
+|Int	|signed     |integer	|System.Int32	|32	        |-231 to 231-1	   |0|
 |uint	|unsigned   |integer	|System.UInt32	|32	        |0 to 232	       |0|
+|long	|signed     |integer	|System.Int64	|64	        |-263 to 263-1	   |0L|
 |ulong	|unsigned   |integer	|System.UInt64	|64	        |0 to 263	       |0|
 
 
@@ -63,7 +68,7 @@ Parimitive date type is any data type that is not a reference to an object.
     primitive data
 
 
-#### Referenc Type:
+#### Reference Type:
     Refers to a memory location assigned to a variable, does not hold a data value. 
     Built-in reference types:
       1 string
@@ -156,7 +161,7 @@ Console.WriteLine("You won a {0}.", message);
 ---
 # Operators
 ```c#
-// Variaable declaration
+// Variable declaration
 int x, y, a ,b;
 // Assignment Operator
 x=3;
@@ -198,14 +203,14 @@ Console.WriteLine("Hi");```
 ---
 ## For Iteration Statement
 ```c#
-// Variaable declaration
+// Variable declaration
 for (int i=0; i<10; i++)
   Console.WriteLine(i);
 ```
 
 ---
 # Arrays
-## Arrays are like a fishing tacelbox
+## Arrays are like a fishing tackle box
 ```c#
 int[] numbers = new int[5];
 numbers[0] = 4;
@@ -1006,12 +1011,12 @@ static void Main(string[] args)
 
 }
 
-// 4. Create a  helper method allowing input paramiter: Car car
+// 4. Create a  helper method allowing input parameter: Car car
 private static decimal DetermineMarketValue(Car car)
 {
   // Temp hard code car value = 100
   decimal CarValue = 100.0M;
-  // Todo: Look up using sebservice for accurate value.
+  // Todo: Look up using web for accurate value.
   return CarValue;
 }
 
@@ -1063,13 +1068,13 @@ static void Main(string[] args)
 
 }
 
-// 4. Create a  helper method allowing input paramiter: Car car
+// 4. Create a  helper method allowing input parameter: Car car
 
 private static decimal DetermineMarketValue(Car car)
 {
   // Temp hard code car value = 100
   decimal CarValue = 100.0M;
-  // Todo: Look up using sebservice for accurate value.
+  // Todo: Look up using web for accurate value.
   return CarValue;
 }
 
