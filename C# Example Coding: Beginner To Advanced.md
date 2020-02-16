@@ -1,5 +1,18 @@
 # C# Example Coding: Beginner To Advanced
 
+### Integral Variables:
+|ALIAS	|TYPE	    |TYPE       |NAME	        |SIZE(BITS)	|RANGE	           |DEFAULT VALUE|
+|-------|-----------|-----------|---------------|---------------|------------------|-------------|
+|short	|signed     |integer	|System.Int16	|16	        |-32768 to 32767   |0|
+|sbyte	|signed     |integer	|System.Sbyte	|8	        |-128 to 127	   |0|
+|Int	|signed     |integer	|System.Int32	|32	        |-231 to 231-1	   |0|
+|long	|signed     |integer	|System.Int64	|64	        |-263 to 263-1	   |0L|
+|byte	|unsigned   |integer	|System.byte	|8	        |0 to 255	   |0|
+|ushort	|unsigned   |integer	|System.UInt16	|16	        |0 to 65535	   |0|
+|uint	|unsigned   |integer	|System.UInt32	|32	        |0 to 232	   |0|
+|ulong	|unsigned   |integer	|System.UInt64	|64	        |0 to 263	   |0|
+
+
 ## Hello World
 ```c#
 using System; using System.Threading.Tasks;
