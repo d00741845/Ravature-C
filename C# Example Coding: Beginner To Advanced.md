@@ -1102,19 +1102,18 @@ class Car
 ```
 
 ---
-
 !["Resume 4:32"](https://youtu.be/FPeGkedZykA?t=16275 "Resume for this point")
 # More About Classes and Methods
-## Simple Understanding of Class via Bucket with Handels
-### Create Class, 2 handles to same buckt, prove both handle affect same data
+## Simple Understanding of Class via Bucket with Handles
+### Create Class, 2 handles to same bucket, prove both handle affect same data, remove handle with null
 ```c#
 static void Main(string[] args){
   // 3. Create New Instance of Car Class called myCar
-  // This will Create a bucket for addresse
+  // This will Create a bucket for address
   Car myCar      = new Car();
   
   // 4. Create a handle into the bucket
-  myCar.Make      = "Oldmosbill";
+  myCar.Make      = "Oldsmobile";
   myCar.Model     = "cutlass supreme"  ;
   myCar.Color     = "blue";
   myCar.Year      = 1919;
@@ -1148,14 +1147,172 @@ class Car{
   public string Color { get; set; }
 
 }}}
-
 ```
+---
+!["Constructors 4:32"](https://youtu.be/FPeGkedZykA?t=17348 "Resume for this point")
+# Deeper About Classes and Methods
+## Simple Understanding Adding Constructors and Overloading by modifying previous code
+### Create Class Constructors: a method to allow us to use out of the box. make object immediately usable when called.
+### The constructor can load data from config file or a database, etc.
+```c#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace JessePlayHouse{
+class Program{
+
+static void Main(string[] args){
+  // Create New Instance of Car Class called myCar
+  // This will Create a bucket for address
+  Car myCar      = new Car();
+  
+  /* not needed per constructor was made in the Car class
+  // Create a handle into the bucket
+  myCar.Make      = "Oldsmobile";
+  myCar.Model     = "Cutlass Supreme"  ;
+  myCar.Color     = "Blue";
+  myCar.Year      = 1919;
+  */
+
+  // Create New Bucket handle and attach to myCar bucket
+  //Car myOtherCar;     // Created the bucket handle
+  //myOtherCar = myCar; // Attach  the new handle to myCar bucket - (Just Copied the handle of myCar)
+  Car myOtherCar = myCar; // same as above 2 lines
+  
+  // create new instance of Car Class and immediately initialized its values 
+  // by calling the overloading constructor to populate its values at the moment of instantuation
+  Car myThirdCar = new Car("Ford", "Mustang", 1998, "Red");
+
+
+  // Prove is just attached to same bucket of information.
+  Console.Clear();
+  Console.WriteLine("MyOtherCar:\n{0}\t{1}\n{2}\t{3}",myOtherCar.Make, 
+    myOtherCar.Model, myOtherCar.Year, myOtherCar.Color);
+
+  myOtherCar.Year=2020;
+
+  Console.WriteLine("\nMyCar:\n{0}\t{1}\n{2}\t{3}",myCar.Make, 
+    myCar.Model, myCar.Year, myCar.Color);
+ 
+  Console.WriteLine("\nMy3rd:\n{0}\t{1}\n{2}\t{3}",myThirdCar.Make, 
+    myThirdCar.Model, myThirdCar.Year, myThirdCar.Color);
+ 
+ 
+  // Manuel Remove Handles
+  myCar=null;
+  myOtherCar=null; 
+}
+
+// Define a Class
+class Car{
+  // Define Properties(define data types)
+  public string Make { get; set; }
+  public string Model { get; set; }
+  public int Year { get; set; }
+  public string Color { get; set; }
+
+  // 1. Constructor here:
+  public Car(){
+    // Note that this is where we can load values from a configuration file
+    // or from database, etc...
+    this.Make = "Nissan"; //Old way using: this.propertiy
+    Model     = "Maxima";
+    Year      = 2021;
+    Color     = "Black";
+  }
+  // Create Overloading Constructor
+  public Car( string make, string model, int year, string color ){
+    Make = make;
+    this.Model = model;
+    this.Year = year;
+    Color = color;
+  }
+}}}
+```
+---
+!["Static Class 4:57"](https://youtu.be/FPeGkedZykA?t=17853 "Resume for this point")
+# Deeper About Classes and Methods
+* Simple Understanding Static vs Public by modifying previous code
+* Create Static Class Constructors: a static method to allow us to not need to create a instance of the class in order utalize that method. 
+* In some casses are created as static, all its properties and classes are static.
+* last example: create a static method on our car class below: 
 
 ```c#
-```
-```c#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
+namespace JessePlayHouse{
+class Program{
+
+static void Main(string[] args){
+  
+  Console.Clear();
+  Car.MyMethod();
+
+  Car myCar = new Car();
+  Car myOtherCar = myCar; 
+  Car myThirdCar = new Car("Ford", "Mustang", 1998, "Red");
+
+  Console.WriteLine("MyOtherCar:\n{0}\t{1}\n{2}\t{3}",myOtherCar.Make, 
+    myOtherCar.Model, myOtherCar.Year, myOtherCar.Color);
+
+  myOtherCar.Year=2020;
+
+  Console.WriteLine("\nMyCar:\n{0}\t{1}\n{2}\t{3}",myCar.Make, 
+    myCar.Model, myCar.Year, myCar.Color);
+ 
+  Console.WriteLine("\nMy3rd:\n{0}\t{1}\n{2}\t{3}",myThirdCar.Make, 
+    myThirdCar.Model, myThirdCar.Year, myThirdCar.Color);
+ 
+  // Manuel Remove Handles
+  myCar=null;
+  myOtherCar=null; 
+  myThirdCar=null; 
+}
+
+// Define a Class
+class Car{
+  // Define Properties(define data types)
+  public string Make { get; set; }
+  public string Model { get; set; }
+  public int Year { get; set; }
+  public string Color { get; set; }
+
+  // Constructors starts here:
+  public Car(){
+    this.Make = "Nissan"; //Old way using: this.propertiy
+    Model     = "Maxima";
+    Year      = 2021;
+    Color     = "Black";
+  }
+  // Create Overloading Constructor
+  public Car( string make, string model, int year, string color ){
+    Make = make;
+    this.Model = model;
+    this.Year = year;
+    Color = color;
+  }
+  // ** Create STATIC METHOD:
+  public static void MyMethod(){
+    Console.WriteLine("Just Called The Static MyMethod");
+    // will not work as expected pre Make is not static::: Console.WriteLine(Make);
+  }
+}}}
 ```
+---
+!["Understanding Scope and Accessibility Modifiers 5:05"](https://youtu.be/FPeGkedZykA?t=18359 "Resume for this point")
+# Understanding Scope and Accessibility Modifiers
+* xxxxxx
+* xxxxxxxx 
+* xxxxxx
+* xxxxxxxx
+
 ```c#
 
 ```
