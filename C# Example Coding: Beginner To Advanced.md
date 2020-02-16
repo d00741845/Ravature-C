@@ -1,18 +1,98 @@
 # C# Example Coding: Beginner To Advanced
 
+
+### Variable:
+ -  whole number
+ -  single character of data
+ -  true or false value
+ -  line of text 
+ -  reference to an Object in memory
+ -  reference to specific instance of another class
+ -  name CANNOT have spaces
+ -  written in lower camel case
+ -  different types require different amounts of memory
+
+Parimitive date type is any data type that is not a reference to an object.
+
+
+### Variable Types:
+    1 int       integral variables
+    2 float
+    3 char
+
+
+ 
 ### Integral Variables:
 |ALIAS	|TYPE	    |TYPE       |NAME	        |SIZE(BITS)	|RANGE	           |DEFAULT VALUE|
-|-------|-----------|-----------|---------------|---------------|------------------|-------------|
+|-------|-----------|-----------|---------------|-----------|------------------|-------------|
 |short	|signed     |integer	|System.Int16	|16	        |-32768 to 32767   |0|
 |sbyte	|signed     |integer	|System.Sbyte	|8	        |-128 to 127	   |0|
 |Int	|signed     |integer	|System.Int32	|32	        |-231 to 231-1	   |0|
 |long	|signed     |integer	|System.Int64	|64	        |-263 to 263-1	   |0L|
-|byte	|unsigned   |integer	|System.byte	|8	        |0 to 255	   |0|
-|ushort	|unsigned   |integer	|System.UInt16	|16	        |0 to 65535	   |0|
-|uint	|unsigned   |integer	|System.UInt32	|32	        |0 to 232	   |0|
-|ulong	|unsigned   |integer	|System.UInt64	|64	        |0 to 263	   |0|
+|byte	|unsigned   |integer	|System.byte	|8	        |0 to 255	       |0|
+|ushort	|unsigned   |integer	|System.UInt16	|16	        |0 to 65535	       |0|
+|uint	|unsigned   |integer	|System.UInt32	|32	        |0 to 232	       |0|
+|ulong	|unsigned   |integer	|System.UInt64	|64	        |0 to 263	       |0|
 
 
+### Floating point data types:
+#### float
+    32-bit single (7-digit) precision floating point type declared using the keyword float. 
+    For initializing any variable with a float, you have to mention a 'f' or 'F' after the value. 
+    For example: float g = 62.4f; 
+    In case you do not use the suffix, then compiler treats the value as double.
+#### double
+    64-bit (14-15 digit) precision floating point type declared using the keyword double. 
+    For initializing any variable with double, you have to mention a 'd' or 'D' after the value. 
+    For example, double ks =8.403122d;
+
+
+#### Decimal Types:
+    Used for extensive calculations which are of 128-bit used for calculating huge economic data. 
+    It uses' or 'M' as the suffix; otherwise, the value will be treated as double.
+    In binary arithmetic, the more bits you use to store decimal data, the more precise those decimal values can be.
+
+#### Character Types:
+    Used for representing 16-bit Unicode character used for storing a single character.
+    Unicode standard limits range of values that can be assigned to a character variable.
+    Unicode contains over 100,000 characters, including the alphabets of most languages, digits, and various other symbols. 
+
+
+#### Boolean Type:
+    bool, Boolean data, true/false value, 8-bits. 
+    primitive data
+
+
+#### Referenc Type:
+    Refers to a memory location assigned to a variable, does not hold a data value. 
+    Built-in reference types:
+      1 string
+          do not take up a predetermined amount of space.
+          will reserve memory as needed.
+          can be any amount of text.
+          can be any type of text.
+      2 object
+      3 dynamic
+
+#### Pointer Type:
+  Used for storing the address of any memory location which is of another type. 
+  Pointers are considered a separate data type kind because they do not hold the actual value or data; 
+  They store the memory location. 
+  The concept of pointers came in C# from C and C++.
+
+### Declaring pointers:
+#### Syntax
+```c#
+type* identifier;
+```
+#### Example:
+```c#
+char* str_name;
+int* user_id;
+```
+
+
+---
 ## Hello World
 ```c#
 using System; using System.Threading.Tasks;
@@ -20,8 +100,12 @@ namespace HelloWorld {
   class Program {
     static void Main(string[] args) {
       Console.WriteLine("Hello World");
-      Console.ReadLine();}}}
+      Console.ReadLine();
+    }
+  }
+}
 ```
+
 ### Int
 ```c#
 int x, y;
