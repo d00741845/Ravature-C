@@ -1103,9 +1103,10 @@ class Car
 
 ---
 
-[Resume]https://youtu.be/FPeGkedZykA?t=16275
-# More About Classes and Methods (4:32)
+!["Resume 4:32"](https://youtu.be/FPeGkedZykA?t=16275 "Resume for this point")
+# More About Classes and Methods
 ## Simple Understanding of Class via Bucket with Handels
+### Create Class, 2 handles to same buckt, prove both handle affect same data
 ```c#
 static void Main(string[] args){
   // 3. Create New Instance of Car Class called myCar
