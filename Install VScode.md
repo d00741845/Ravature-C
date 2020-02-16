@@ -5,18 +5,15 @@ Snaps are applications packaged with all their dependencies to run on all popula
 
 Snaps are discoverable and installable from the Snap Store(https://snapcraft.io/store), an app store with an audience of millions.
 
-
 ## Enable snapd
 Snap is available for Linux Mint 18.2 (Sonya), Linux Mint 18.3 (Sylvia), and the latest releases, Linux Mint 19 (Tara), Linux Mint 19.1 (Tessa), Linux Mint 19.2 (Tina) and Linux Mint 19.3 (Tricia). You can find out which version of Linux Mint you’re running by opening System info from the Preferences menu. To install snap from the Software Manager application, search for snapd and click Install.
 
-## Alternatively, snapd can be installed from the command line:
+## Alternatively, snapd Install from Command Line:
 ```bash
 sudo apt update
 sudo apt install snapd
+sudo reboot
 ```
-Reboot to complete the installation.
-
-
 
 ## Install Visual Studio Code (SNAP)
 Install Visual Studio Code:
@@ -29,21 +26,20 @@ Remove a Snap package:
 sudo snap remove <package>
 sudo snap remove code
 ```
-
+---
 # Register Microsoft key and Needed before installing .NET:
-  1. Register the Microsoft key.
-  2. Register the product repository.
-  3. Install required dependencies.
-  ** This only needs to be done once per machine.
-Run:
+1. Register the Microsoft key.
+2. Register the product repository.
+3. Install required dependencies.
+* This only needs to be done once per machine.
+## Run Command:
 ```bash
 wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-## Install the .NET Core SDK
-Update & Install the .NET Core SDK: 
-
+## Install: .NET Core SDK
+* Update & Install the .NET Core SDK: 
 ```bash
 sudo apt-get update
 sudo apt-get install apt-transport-https
@@ -52,8 +48,8 @@ sudo apt-get install dotnet-sdk-3.1
 ```
 
 ## Install the ASP.NET Core runtime
-Update the products available for installation, then install the ASP.NET Core runtime. In your terminal, run the following commands.
-
+* Update the products available for installation, then install the ASP.NET Core runtime. 
+* In your terminal, run the following commands.
 ```bash
 sudo apt-get update
 sudo apt-get install apt-transport-https
@@ -62,7 +58,8 @@ sudo apt-get install aspnetcore-runtime-3.1
 ```
 
 # Install the .NET Core runtime
-Update the products available for installation, then install the .NET Core runtime. In your terminal, run the following commands.
+* Update the products available for installation, then install the .NET Core runtime. 
+* In your terminal, run the following commands.
 ```bash
 sudo apt-get update
 sudo apt-get install apt-transport-https
@@ -74,25 +71,24 @@ sudo apt-get install dotnet-runtime-3.1
 The packages added to the package manager feeds are named in a hackable format: 
 {product}-{type}-{version}.
 
-  product
-  The type of .NET product to install. Valid options are:
-    dotnet
-    aspnetcore
-  type
-  Chooses the SDK or the runtime. Valid options are:
-    sdk
-    runtime
-  version
-  The version of the SDK or runtime to install. 
-  This article will always give the instructions for the latest supported version. 
-  Valid options are any released version, such as:
-    3.0
-    2.2
-    2.1
-  Examples
-    Install the .NET Core 2.2 SDK: dotnet-sdk-2.2
-    Install the ASP.NET Core 3.1 runtime: aspnetcore-runtime-3.1
-    Install the .NET Core 2.1 runtime: dotnet-runtime-2.1
+* product
+  * The type of .NET product to install. Valid options are:
+    * dotnet
+    * aspnetcore
+* type
+  * Chooses the SDK or the runtime. Valid options are:
+    * sdk
+    * runtime
+* version
+  * The version of the SDK or runtime to install. 
+  * Valid options are any released version, such as:
+    * 3.0
+    * 2.2
+    * 2.1
+* Examples
+  * Install the .NET Core 2.2 SDK: dotnet-sdk-2.2
+  * Install the ASP.NET Core 3.1 runtime: aspnetcore-runtime-3.1
+  * Install the .NET Core 2.1 runtime: dotnet-runtime-2.1
 
 
 # Create Firtst Console app 
@@ -107,8 +103,8 @@ Build an application to read text file, and echoe file data to the console.
 Paced output to the console with adjustable speed control. 
 Key Press '<' (less than) or '>' (greater than).
 
-## Create "Hello World" the app
-1.Open a command prompt, make dir, chg dir, create starter files.
+## FILE SETUP TO: Create "Hello World" the app
+* Open a command prompt, make dir, chg dir, create starter files.
 ```bash
     mkdir helloworld
     cd helloworld
@@ -122,21 +118,18 @@ dotnet run
 ```
 
 ## Make first change 
-Edit Program.cs, change namespace: namespace TeleprompterConsole
+* Edit Program.cs, change namespace: namespace TeleprompterConsole
 ```bash
 gedit Program.cs
 ```
 
 ## Create sampleQuotes.txt for Reading and Echoing the File
-Create and place several lines of data for this project.
+* Create and place several lines of data for this project.
 ```bash
 touch sampleQuotes.txt
 gedit sampleQuotes.txt
 ```
-
-Edit Program.cs adding the following method into Program class (right below the Main method):
-
-C#
+## Edit Program.cs adding the following method into Program class (right below the Main method):
 ```c#
 using System;
 using System.Collections.Generic;
@@ -171,7 +164,6 @@ namespace TeleprompterConsole
 
 ## Run the program (using dotnet run)
 note every line printed out to the console.
-
 
 ## Adding Delays and Formatting output
 it is displayed too fast to read aloud. 
@@ -283,8 +275,6 @@ namespace TeleprompterConsole
 
 ## Async Tasks, Contols
 Alter the code to write the output asynchronously in one task, while also running another task to read input from the user to speed up, slow down the text display, or stop.
-
-
 ```c#
 using System;
 using System.Collections.Generic;
