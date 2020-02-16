@@ -1,4 +1,4 @@
-# C# Coding: Beginner To Advance
+# C# Example Coding: Beginner To Advanced
 
 ## Hello World
 ```c#
@@ -7,12 +7,9 @@ namespace HelloWorld {
   class Program {
     static void Main(string[] args) {
       Console.WriteLine("Hello World");
-      Console.ReadLine();
-    }
-  }
-}
+      Console.ReadLine();}}}
 ```
-
+### Int
 ```c#
 int x, y;
 x=7;
