@@ -40,3 +40,16 @@ if (s.Equals(s2)) { ... }
 ```
 
 This is because the equals() method of the String class has been overridden to compare the contents of the current string and one passed in as an argument.
+
+---
+
+Created by:
+Jesse Fore
+service.awg@gmail.com
+
+Updated:
+22 February 2020
+
+-_-
+---
+
