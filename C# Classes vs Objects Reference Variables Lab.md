@@ -22,3 +22,15 @@ Dog someVar = new Dog();
 - The Dog type means that someVar can only be used to invoke methods or access public variables present in the Dog class (whether defined in Dog or inherited from a superclass)
 - The "new Dog()" expression creates an object, it is not the object itself. 
 Understanding these concepts and their implications is key to properly understanding the C# language.
+
+---
+
+Created by:
+Jesse Fore
+service.awg@gmail.com
+
+Updated:
+22 February 2020
+
+-_-
+---
