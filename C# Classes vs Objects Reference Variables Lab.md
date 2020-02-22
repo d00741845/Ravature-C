@@ -27,6 +27,7 @@ Understanding these concepts and their implications is key to properly understan
 
 Created by:
 Jesse Fore
+
 service.awg@gmail.com
 
 Updated:
