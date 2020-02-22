@@ -45,6 +45,7 @@ This is because the equals() method of the String class has been overridden to c
 
 Created by:
 Jesse Fore
+
 service.awg@gmail.com
 
 Updated:
@@ -52,4 +53,3 @@ Updated:
 
 -_-
 ---
-
