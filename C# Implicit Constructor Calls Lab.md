@@ -48,4 +48,15 @@ In this example, the no-arg constructor of Dog will invoke the constructor that 
 
 No matter how you chain constructors like this, eventually the base class constructor must be called. This ensures that at the end of the chain, the Object class constructor is getting called, so the object can actually be created in memory.
 
+---
 
+Created by:
+Jesse Fore
+
+service.awg@gmail.com
+
+Updated:
+22 February 2020
+
+-_-
+---
